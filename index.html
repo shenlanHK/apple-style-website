@@ -1,194 +1,50 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechStyle - 苹果风格网站</title>
-    <style>
-        /* 苹果风格CSS */
-        :root {
-            --apple-white: #f5f5f7;
-            --apple-black: #1d1d1f;
-            --apple-gray: #86868b;
-            --apple-blue: #0071e3;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            background-color: var(--apple-white);
-            color: var(--apple-black);
-            line-height: 1.5;
-        }
-        
-        /* 导航栏 */
-        .navbar {
-            background: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(20px);
-            height: 60px;
-            padding: 0 20px;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            z-index: 1000;
-        }
-        
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-        }
-        
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 30px;
-        }
-        
-        .nav-links a {
-            text-decoration: none;
-            color: var(--apple-black);
-            font-size: 14px;
-            transition: opacity 0.3s;
-        }
-        
-        .nav-links a:hover {
-            opacity: 0.7;
-        }
-        
-        /* 主内容区 */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 0 20px;
-        }
-        
-        .hero-content h1 {
-            font-size: 48px;
-            font-weight: 700;
-            margin-bottom: 20px;
-        }
-        
-        .hero-content p {
-            font-size: 24px;
-            color: var(--apple-gray);
-            margin-bottom: 30px;
-        }
-        
-        .cta-button {
-            display: inline-block;
-            padding: 12px 24px;
-            background: var(--apple-blue);
-            color: white;
-            text-decoration: none;
-            border-radius: 980px;
-            font-size: 17px;
-            transition: transform 0.3s;
-        }
-        
-        .cta-button:hover {
-            transform: scale(1.05);
-        }
-        
-        /* 产品展示区 */
-        .products {
-            padding: 100px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .section-title {
-            text-align: center;
-            font-size: 40px;
-            margin-bottom: 60px;
-        }
-        
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        
-        .product-card {
-            background: white;
-            border-radius: 18px;
-            padding: 30px;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-        
-        /* 响应式设计 */
-        @media (max-width: 768px) {
-            .hero-content h1 {
-                font-size: 36px;
-            }
-            
-            .nav-links {
-                display: none;
-            }
-        }
-    </style>
-</head>
-<body>
-    <nav class="navbar">
-        <div class="logo">TechStyle</div>
-        <ul class="nav-links">
-            <li><a href="#home">首页</a></li>
-            <li><a href="#products">产品</a></li>
-            <li><a href="#about">关于</a></li>
-            <li><a href="#contact">联系</a></li>
-        </ul>
-    </nav>
+<!-- 首页 Section -->
+<section class="hero" id="home">
+    <div class="hero-content">
+        <h1>创新设计，卓越体验</h1>
+        <p>探索科技与美学的完美结合</p>
+        <a href="#products" class="cta-button">了解详情</a>
+    </div>
+</section>
 
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <h1>创新设计，卓越体验</h1>
-            <p>探索科技与美学的完美结合</p>
-            <a href="#products" class="cta-button">了解详情</a>
+<!-- 产品展示 Section -->
+<section class="products" id="products">
+    <h2 class="section-title">精选产品</h2>
+    <div class="product-grid">
+        <div class="product-card">
+            <img src="product1.jpg" alt="智能设备">
+            <h3>智能设备</h3>
+            <p>设计精美，功能强大</p>
+            <a href="#buy-now" class="cta-button">立即购买</a>
         </div>
-    </section>
-
-    <section class="products" id="products">
-        <h2 class="section-title">精选产品</h2>
-        <div class="product-grid">
-            <div class="product-card">
-                <h3>智能设备</h3>
-                <p>设计精美，功能强大</p>
-            </div>
-            <div class="product-card">
-                <h3>高效工具</h3>
-                <p>提升工作效率</p>
-            </div>
-            <div class="product-card">
-                <h3>音频设备</h3>
-                <p>沉浸式音频体验</p>
-            </div>
+        <div class="product-card">
+            <img src="product2.jpg" alt="高效工具">
+            <h3>高效工具</h3>
+            <p>提升工作效率</p>
+            <a href="#buy-now" class="cta-button">立即购买</a>
         </div>
-    </section>
+        <div class="product-card">
+            <img src="product3.jpg" alt="音频设备">
+            <h3>音频设备</h3>
+            <p>沉浸式音频体验</p>
+            <a href="#buy-now" class="cta-button">立即购买</a>
+        </div>
+    </div>
+</section>
 
-    <script>
-        // 简单的交互效果
-        document.addEventListener('DOMContentLoaded', function() {
-            // 导航栏滚动效果
-            window.addEventListener('scroll', function() {
-                const nav = document.querySelector('.navbar');
-                if (window.scrollY > 50) {
-                    nav.style.background = 'rgba(255, 255, 255, 0.95)';
-                } else {
-                    nav.style.background = 'rgba(255, 255, 255, 0.9)';
-                }
-            });
-        });
-    </script>
-</body>
-</html>
+<!-- 关于我们 Section -->
+<section class="about" id="about">
+    <h2 class="section-title">关于我们</h2>
+    <p>TechStyle 是一家专注于将科技与设计相结合的公司。我们致力于为用户提供最创新的产品，提升每一个生活瞬间。</p>
+</section>
+
+<!-- 联系我们 Section -->
+<section class="contact" id="contact">
+    <h2 class="section-title">联系我们</h2>
+    <form action="submit-form.php" method="post">
+        <label for="name">姓名：</label><input type="text" id="name" name="name" required><br><br>
+        <label for="email">电子邮件：</label><input type="email" id="email" name="email" required><br><br>
+        <label for="message">留言：</label><textarea id="message" name="message" rows="4" required></textarea><br><br>
+        <button type="submit" class="cta-button">发送留言</button>
+    </form>
+</section>
